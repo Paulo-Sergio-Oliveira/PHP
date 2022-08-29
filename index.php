@@ -1,7 +1,7 @@
 <?php
     //Variáveis
     $nome = "Paulo Sergio";
-    $idade = 16;
+    $idade = '16';
     $veiculo = "carro";
 
     //Variáveis de variáveis
@@ -17,6 +17,18 @@
         echo "<br> Sua idade está correta!";
     }else{
         echo "<br> Sua idade está incorreta!";
+    }
+
+    if($idade === 16){
+        echo "<br> Sua idade é do tipo number!";
+    }else{
+        echo "<br> Sua idade é do tipo string!";
+    }
+
+    if($idade >= 18){
+        echo "<br> Você é maior de idade!";
+    }else{
+        echo "<br> Você é menor de idade!";
     }
 
     //Looping
@@ -43,6 +55,9 @@
         echo "<br> O nome dele é ".$n.".";
     }
     printNome("Thierry");
+
+    //Arrays
+    $vetor = array('Paulo', 'Herick', 'Vinicio', 'Thierry');
 
     //Objetos
     class Pessoa{
