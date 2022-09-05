@@ -1,0 +1,8 @@
+Aluno: Paulo Sergio
+Nota: 10
+Aluno: Vinicio
+Nota: 9
+Aluno: Eduardo
+Nota: 3
+Aluno: Thierry
+Nota: 7
