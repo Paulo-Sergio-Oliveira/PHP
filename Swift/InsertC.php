@@ -1,8 +1,14 @@
 <?php
 include_once('Connect.php');
 include_once('Crud.php');
+$cad = $obj->getAllCad();
 
 $id = rand(1,999);
+foreach ($cad as $info) {
+    if ($id == $info['id']) {
+        $id = rand(1,999);
+    }
+}
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $idade = $_POST['idade'];
