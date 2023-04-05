@@ -4,10 +4,11 @@ include_once('Crud.php');
 
 $usuario = $_POST['user'];
 $obj = new Crud($conn);
-$dados = $obj->getLogin(); 
+$dados = $obj->getLogin();
 foreach($dados as $login => $valores){
     if (password_verify($usuario,$valores->usuario)) {
         $dado = $obj->readInfo($valores->id);
+        echo 'Usuário Encontrado.';
     }else{
         echo 'Usuário Incorreto.';
     }

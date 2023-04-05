@@ -1,6 +1,6 @@
 <?php
  session_start();
- if (isset($_SESSION['user'])) {
+ if (isset($_SESSION['id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +11,13 @@
     <title>Acesso Restrito</title>
 </head>
 <body>
-    <?php echo 'Logado como:'.$_SESSION['user'];?>
     <section> <h1> Conteúdo da Página </h1> </section>
+    <?php echo 'Usuário: '.$_SESSION['user'].'<br>
+    Nome: '.$_SESSION['nome'].'<br>
+    Idade: '.$_SESSION['idade'].'<br>
+    Data de Nascimento: '.$_SESSION['data_nasc'].'<br>
+    E-mail: '.$_SESSION['email'].'<br>
+    CPF: '.$_SESSION['cpf'];?>
     <p> <a href='LogOff.php'> Sair </p>
 </body>
 </html>

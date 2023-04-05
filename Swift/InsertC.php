@@ -1,11 +1,12 @@
 <?php
 include_once('Connect.php');
 include_once('Crud.php');
+$obj = new Crud($conn);
 $cad = $obj->getAllCad();
 
 $id = rand(1,999);
-foreach ($cad as $info) {
-    if ($id == $info['id']) {
+foreach ($cad as $info => $value) {
+    if ($id == $value['id']) {
         $id = rand(1,999);
     }
 }

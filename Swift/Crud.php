@@ -9,10 +9,12 @@ class Crud{
     private $senha;
     private $cpf;
     private $data;
+    
     function __construct($conn)
     {
         $this->connect = $conn;
     }
+
     public function setDadosCad($id, $nome, $email, $idade, $cpf, $data, $usuario, $senha){
         $this->id = $id;
         $this->nome = $nome;
@@ -80,7 +82,7 @@ class Crud{
     }
     public function getAllLog(){
         $sql = $this->connect->query("SELECT * FROM login");
-        return $sql->fetchAll();
+        return $sql->fetchAll(PDO::FETCH_OBJ);
     }
     public function updateCad($id,$nome,$email,$idade,$data,$cpf){
         $sql = $this->connect->prepare("UPDATE cadastro SET nome=?, email=?, idade=?, data_nasc=?, cpf=? WHERE id=?");
